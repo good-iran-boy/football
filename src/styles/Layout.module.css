@@ -1,0 +1,17 @@
+.box {
+    height: 100vh;
+    width: 100%;
+    background-color: #3EDBF0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col{
+    background-color: #fff;
+    width: 90%;
+    height: 90%;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
