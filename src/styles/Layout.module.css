@@ -9,9 +9,10 @@
 .col{
     background-color: #fff;
     width: 90%;
-    height: 90%;
+    min-height: 90%;
     border-radius: .5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }

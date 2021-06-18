@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import Layout from "./components/Layout/Layout";
+import Parallelogram from "./components/Parallelogram";
 function App() {
   const [state, setstate] = useState([])
   useEffect(() => {
@@ -17,7 +18,7 @@ function App() {
   console.log(state);
   return (
     <Layout >
-
+<Parallelogram>بازی های لیگ برتر انگلیس</Parallelogram>
     </Layout>
   );
 }

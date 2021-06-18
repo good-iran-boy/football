@@ -4,9 +4,8 @@ export default function Layout({ children }) {
     return (
         <div className={styles.box}>
             <div className={styles.col}>
-                dddd
-            </div>
             {children}
+            </div>
         </div>
     )
 }
