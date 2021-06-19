@@ -10,8 +10,9 @@ export default function Layout({ children }) {
                     <Select />
                     <Parallelogram>بازی های لیگ برتر انگلیس</Parallelogram>
                 </div>
-
+                <div className={styles.data}>
                 {children}
+                </div>
             </div>
         </div>
     )
