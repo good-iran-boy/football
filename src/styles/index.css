@@ -11,3 +11,21 @@ body {
 *{
   font-family:'sahel',sans-serif;
 }
+.loading{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+}
+.loading_txt{
+color: #000;
+font-size: 2rem;
+}
+@media  (max-width:576px) {
+  .loading_txt{
+    color: #000;
+    font-size: 1rem;
+    }
+}

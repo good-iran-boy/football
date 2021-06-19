@@ -19,6 +19,7 @@
 .data{
     width: 100%;
     overflow: auto;
+    height: 100%;
 }
 .title{
     width: 100%;

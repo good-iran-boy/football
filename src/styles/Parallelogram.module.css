@@ -1,0 +1,40 @@
+.Parallelogram {
+    width: max-content;
+    height: 100%;
+    background-color: #fff;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    padding: .6rem .7rem;
+    border: none;
+    outline: none;
+}
+
+.text {
+    text-align: center;
+    font-size: .6rem;
+    color: #188FFE ;
+    padding: 0 1rem;
+}
+
+.box {
+    margin: .5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media  (min-width:576px) {
+    .text{
+        font-size: 1rem;
+    }
+    .Parallelogram {
+        padding: 1rem 2rem;
+    }
+}
+@media  (min-width:780px) {
+    .text{
+        font-size: 1.1rem !important;
+    }
+    .Parallelogram {
+        padding: 1rem 2rem;
+    }
+}
