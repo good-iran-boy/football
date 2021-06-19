@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import styles from "../../styles/game.module.css"
-import { fetcher } from '../lib/fetcher';
 import { teams } from "../lib/teams"
+import moment from 'jalali-moment'
 export default function Game({ data }) {
+    const date = data.utcDate
+    moment.locale('fa');
+    const fullDate = moment.from(date, 'en', 'YYYY-MM-DD')
+    const month=fullDate.format("MMMM")
+    const year=fullDate.format("YYYY")
+    const day=fullDate.format("DD")
     const homeId = data.homeTeam.id;
     const awayId = data.awayTeam.id;
     return (
         <>
             <div className={styles.box}>
                 <div className={styles.date}>
-                    پنج شنبه 22 خرداد
+                    {` ${day} / ${month} / ${year} `}
                 </div>
                 <div className={styles.info}>
                     <div className={styles.away}>

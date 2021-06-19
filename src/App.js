@@ -4,10 +4,13 @@ import Game from './components/Game';
 import { fetcher } from './components/lib/fetcher';
 
 function App() {
+  const baseUrl="https://api.football-data.org/v2/competitions/2021/matches?season=2020&"
   const [data, setdata] = useState([])
-  const [url, seturl] = useState('https://api.football-data.org/v2/competitions/2021/matches?season=2020&dateFrom=2020-09-12&dateTo=2020-09-18')
+  const [url, seturl] = useState(`https://api.football-data.org/v2/competitions/2021/matches?season=2020&dateFrom=2020-09-12&dateTo=2020-09-18`)
   const [loading, setloading] = useState(true)
-
+  const ChangeSelect = (e) => {
+    seturl(baseUrl+e.target.value)
+  }
   useEffect(() => {
     async function fetching() {
       const lists = await fetcher(url);
@@ -16,13 +19,13 @@ function App() {
     }
     fetching()
 
-  }, [])
+  }, [url])
   return (
-    <Layout >
-       {loading?<div className='loading'>
+    <Layout select={ChangeSelect}>
+      {loading ? <div className='loading'>
         <p className="loading_txt">... لطفا صبر کنید  </p>
-      </div>:data.map((game,i)=>{
-        return <Game data={game} key={i}/>
+      </div> : data.map((game, i) => {
+        return <Game data={game} key={i} />
       })}
     </Layout>
   );

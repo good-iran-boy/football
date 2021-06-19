@@ -16,6 +16,8 @@
 
 .date {
     font-size: 11px;
+    direction: rtl;
+    opacity: 0.6;
 }
 
 .home {
