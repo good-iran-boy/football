@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styles from "../../styles/game.module.css"
 import { teams } from "../lib/teams"
 import moment from 'jalali-moment'
@@ -20,7 +20,7 @@ export default function Game({ data }) {
                 <div className={styles.info}>
                     <div className={styles.away}>
                         <p className={styles.name}> {teams[homeId].faName} </p>
-                        <img src={teams[homeId].crestUrl} className={styles.img} />
+                        <img src={teams[homeId].crestUrl} className={styles.img} alt={teams[homeId].faName}/>
                     </div>
                     <div className={styles.result}>
                         <div>
@@ -31,7 +31,7 @@ export default function Game({ data }) {
                         پایان
                     </div>
                     <div className={styles.home}>
-                        <img src={teams[awayId].crestUrl} className={styles.img} />
+                        <img src={teams[awayId].crestUrl} className={styles.img} alt={teams[awayId].faName}/>
                         <p className={styles.name}> {teams[awayId].faName} </p>
                     </div>
                 </div>

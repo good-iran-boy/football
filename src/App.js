@@ -33,19 +33,3 @@ function App() {
 }
 
 export default App;
-// 'http://api.football-data.org/v2/teams/57'
-
-// const convertArrayToObject = (array, key) => {
-//   const initialValue = {};
-//   return array.reduce((obj, item) => {
-//     return {
-//       ...obj,
-//       [item[key]]: item,
-//     };
-//   }, initialValue);
-
-// };
-
-// const obj=convertArrayToObject(data,'id');
-// const jsonli=JSON.stringify(obj)
-// console.log(obj);
