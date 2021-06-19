@@ -10,6 +10,7 @@ function App() {
   const [loading, setloading] = useState(true)
   const ChangeSelect = (e) => {
     seturl(baseUrl+e.target.value)
+    setloading(!loading);
   }
   useEffect(() => {
     async function fetching() {
