@@ -5,6 +5,7 @@ import moment from 'jalali-moment'
 import { addTimes } from '../lib/Time'
 export default function Game({ data }) {
     const dates = data.utcDate
+    const{referees}=data;
     moment.locale('fa');
     const time=dates.slice(11,16)
     const fullDate = moment.from(dates, 'en', 'YYYY-MM-DD')
@@ -39,6 +40,12 @@ export default function Game({ data }) {
                         <img src={teams[awayId].crestUrl} className={styles.img} alt={teams[awayId].faName}/>
                         <p className={styles.name}> {teams[awayId].faName} </p>
                     </div>
+                </div>
+                <div className={styles.referees}>
+                اسامی داور ها :
+                {referees.map((ref,i)=>{
+                    return <span key={i} className={styles.ref}>  {ref.name} {' , '}</span>
+                })}
                 </div>
             </div>
             <hr className={styles.hr} />
