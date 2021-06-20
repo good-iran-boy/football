@@ -21,6 +21,7 @@ function App() {
     fetching()
 
   }, [url])
+  console.log(data);
   return (
     <Layout select={ChangeSelect}>
       {loading ? <div className='loading'>

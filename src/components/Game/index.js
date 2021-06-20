@@ -2,20 +2,25 @@ import React from 'react'
 import styles from "../../styles/game.module.css"
 import { teams } from "../lib/teams"
 import moment from 'jalali-moment'
+import { addTimes } from '../lib/Time'
 export default function Game({ data }) {
-    const date = data.utcDate
+    const dates = data.utcDate
     moment.locale('fa');
-    const fullDate = moment.from(date, 'en', 'YYYY-MM-DD')
+    const time=dates.slice(11,16)
+    const fullDate = moment.from(dates, 'en', 'YYYY-MM-DD')
     const month=fullDate.format("MMMM")
     const year=fullDate.format("YYYY")
     const day=fullDate.format("DD")
     const homeId = data.homeTeam.id;
     const awayId = data.awayTeam.id;
+
+   
+   const matchTime=addTimes(time, '04:30')
     return (
         <>
             <div className={styles.box}>
                 <div className={styles.date}>
-                    {` ${day} / ${month} / ${year} `}
+                    {` ${day} / ${month} / ${year} , ساعت برگزاری : ${matchTime}`}
                 </div>
                 <div className={styles.info}>
                     <div className={styles.away}>
